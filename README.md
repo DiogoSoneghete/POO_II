@@ -7,3 +7,5 @@
 2.	Avaliações realizadas por alunos e professores avaliam podendo somente avaliar somente 1 vez determinado grupo
 
 3.	Seguir de acordo com a UML e ser em TypeScript
+
+4.  Usando o Prima como o ORM do sistema
