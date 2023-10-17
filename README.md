@@ -9,3 +9,5 @@
 3.	Seguir de acordo com a UML e ser em TypeScript
 
 4.  Usando o Prima como o ORM do sistema
+
+5. 
