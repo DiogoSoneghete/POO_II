@@ -47,18 +47,8 @@ export class Usuario {
         this.tipoUsuario = tipoUsuario;
     }
 
-
-
-
-
-
-
-
-
-
-
     exibirInformacoes() {
-        console.log(`Nome: ${this.nome}`);
+        console.log(`\nNome: ${this.nome}`);
         console.log(`Matrícula: ${this.matricula}`);
         console.log(`Email: ${this.email}`);
         console.log(`Tipo de Usuário: ${this.tipoUsuario}`);

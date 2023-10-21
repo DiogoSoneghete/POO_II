@@ -1,38 +1,36 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 generator client {
   provider = "prisma-client-js"
 }
 
 datasource db {
   provider = "sqlite"
-  url = "file:./dev.db"
+  url      = "file:./dev.db"
 }
 
 model Usuario {
-  matricula Int @id @unique
-  nome String
-  email String @unique
-  liderGrupo Grupo[] @relation("LiderGrupo") 
-  grupos Grupo[] @relation("MembrosGrupo") 
-  avaliacoes Avaliacao? // Adicionar relação com Avaliacao
+  matricula  Int        @id @unique @default(autoincrement())
+  nome       String
+  email      String     @unique
+  avaliacoes Avaliacao?
+  liderGrupo Grupo[]    @relation("LiderGrupo")
+  grupos     Grupo[]    @relation("MembrosGrupo")
 }
 
 model Grupo {
-  nome String
-  lider Usuario[] @relation("LiderGrupo")
-  membros Usuario[] @relation("MembrosGrupo")
-  estande Int @id
-  data DateTime
-  avaliacoes Avaliacao[] // Adicionar relação com Avaliacao
+  nome       String
+  estande    Int         @id @default(autoincrement())
+  data       DateTime
+  avaliacoes Avaliacao[]
+  lider      Usuario[]   @relation("LiderGrupo")
+  membros    Usuario[]   @relation("MembrosGrupo")
+
   @@unique([nome, estande])
 }
 
 model Avaliacao {
-  nota Float
-  matricula Int @id
+  nota             Float
+  matricula        Int     @id @default(autoincrement())
+  estande          Int
+  estandeGrupo     Grupo   @relation(fields: [estande], references: [estande])
   matriculaUsuario Usuario @relation(fields: [matricula], references: [matricula])
-  estande Int
-  estandeGrupo Grupo @relation(fields: [estande], references: [estande])
 }
