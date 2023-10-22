@@ -1,13 +1,24 @@
-# Sistema avaliativo do InovaWeek
+# Sistema Avaliativo Inova Week
 
- ### Alguns requisitos do projeto:
+### Projeto de POO 
 
-1.	Sistema de avaliação de estandes do evento (separados por data e hora)
+**Nomes:** Diogo Soneghete, Pedro Lucas, Paulo Victor e Eduardo Moisés
+***
+**Turma:** CC4M
+***
 
-2.	Avaliações realizadas por alunos e professores avaliam podendo somente avaliar somente 1 vez determinado grupo
+# Explicando
 
-3.	Seguir de acordo com a UML e ser em TypeScript
-
-4.  Usando o Prima como o ORM do sistema.
-
-5. 
+Sistema de avaliação por meio de notas de alunos e professores aos grupos do Inova.
+***
+**Para rodar o projeto utilizamos:**
+```
+npx ts-node-dev --respawn index.ts
+```
+Em seguida inserimos primeiramente os dados da pessoa ou das pessoas que irão entrar no sistema.
+***
+**Para conferirmos os dados cadastrados podemos utilizar:**
+```
+npx prisma studio
+```
+***
