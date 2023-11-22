@@ -43,3 +43,6 @@ npx prisma studio
 ### Classe Avaliação
 
 ![image](https://github.com/DiogoSoneghete/sistema_avaliativo/assets/103038064/9387a4d4-ccfa-4712-ba3b-c7ab5987f9ff)
+
+shift+alt+f 
+
