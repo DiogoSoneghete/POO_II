@@ -1,6 +1,6 @@
 import { PrismaClient } from '@prisma/client';
 import * as readline from 'readline';
-import { Usuario } from './src/Usuario';
+import { Usuario } from './Usuario';
 
 const prisma = new PrismaClient();
 const rl = readline.createInterface({
