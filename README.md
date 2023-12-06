@@ -16,7 +16,7 @@ A inserção de dados é feita de forma dinâmica, por forma de inserção de da
 ***
 **Para rodar o projeto utilizamos:**
 ```
-npx ts-node-dev --respawn index.ts
+npx ts-node-dev --respawn ./src/index.ts
 ```
 
 ***
