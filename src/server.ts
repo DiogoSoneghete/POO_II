@@ -1,17 +1,17 @@
-import express from "express";
-import UserRouter from "./routes/UserRoutes";
+import express from 'express';
+import MainRouter from './routes/MainRoutes';
+import UserRouter from './routes/UserRoutes';
 
-const  app = express();
-
-app.use(express.json());
-app.use(UserRouter);
-
+const app = express();
 const port = 3000;
 
-app.get('/', function (req,res){
-    res.send('tudo ok');
-});
+app.use(express.json());
+app.set('view engine', 'ejs');
+app.set('views', './src/views');
+
+app.use(UserRouter);
+app.use(MainRouter);
 
 app.listen(port, function(){
-    console.log('Server rodando na porta ' + port);
-});
+    console.log(`Server running on port ${port}`);
+})
